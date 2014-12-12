@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "building openttd image"
+docker build -t openttd-server .
+docker run -d \
+	-p 3979:3979 -p 3979:3979/udp \
+	-v /mnt/openttd:/home/openttd/.openttd/save/ \
+	-e SAVEGAME_NAME="hans.sav" \
+	openttd-server
