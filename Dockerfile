@@ -68,4 +68,5 @@ RUN unzip -d . /tmp/$ottd_msx && \
 WORKDIR /home/openttd
 
 # Set default container command
-ENTRYPOINT /usr/games/openttd -D -g save/$SAVEGAME_NAME
+#ENTRYPOINT /usr/games/openttd -D -g save/$SAVEGAME_NAME
+ENTRYPOINT /usr/games/openttd -D
