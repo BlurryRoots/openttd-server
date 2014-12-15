@@ -66,6 +66,7 @@ RUN unzip -d . /tmp/$ottd_msx && \
 
 # Change context to user home folder
 WORKDIR /home/openttd
+COPY openttd.cfg /home/openttd/.openttd/openttd.cfg
 
 # Set default container command
 #ENTRYPOINT /usr/games/openttd -D -g save/$SAVEGAME_NAME
